@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+
+
+jwt:
+  secret: secretkey123
+
+airtimevtu:
+  baseurl: https://billerstest.xpresspayments.com:9603/api/v1/
+  privatekey: 1SOo6tt8oS0xpJrzObHlOc9tPVMPWQKi_CVASPRV
+  publickey: ukX2HLzxxeW4dfFYuo0KxRPP3S3oYJMA_CVASPUB
