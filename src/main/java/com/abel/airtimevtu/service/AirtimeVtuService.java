@@ -18,16 +18,13 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class AirtimeVtuService {
 
+    //to do: implement exception handling, catch bad request exception
+    //implement swagger?
+    //write unit test create branch make change, merge and push
+
     private final WebClient webClient;
 
     private final PaymentHashGenerator paymentHashGenerator;
-   // private final HttpServletRequest httpServletRequest;
-
-//    private String baseUrl = "https://billerstest.xpresspayments.com:9603/api/v1/"; //extract to config!!
-//
-//    private String publicKey = "ukX2HLzxxeW4dfFYuo0KxRPP3S3oYJMA_CVASPUB";//extract to config
-//
-//    private String privateKey = "1SOo6tt8oS0xpJrzObHlOc9tPVMPWQKi_CVASPRV";//extract to config
 
     @Value("${airtimevtu.baseurl}")
     private String baseUrl;
