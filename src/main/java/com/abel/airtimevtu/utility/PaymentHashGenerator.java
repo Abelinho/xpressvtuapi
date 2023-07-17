@@ -11,21 +11,6 @@ import java.security.NoSuchAlgorithmException;
 @Component
 public class PaymentHashGenerator {
 
-//        public static void main() {
-//
-//            //convert request to JSON using gson or ObjectMapper
-//            String toHash = "{
-//            " +
-//            "    "size":1,
-//            " +
-//            "    "page": 1
-//            " +
-//            "}";
-//
-//            var result = calculateHMAC512(toHash, "2FMm1t1c30iQLCMNZADpxb7CI0TLZgOF_CVASPRV");
-//
-//            System.out.println(result);
-//        }
 
         public String calculateHMAC512(String data, String key) {
             String HMAC_SHA512 = "HmacSHA512";

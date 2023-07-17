@@ -47,13 +47,11 @@ public class HomeController {
     }
 
     @PostMapping("/airtime/fulfil")
-    public AppResponse airtime(@RequestBody AirtimeRequest airtimeRequest) throws IOException {
+    public AppResponse<AirtimeResponse> airtime(@RequestBody AirtimeRequest airtimeRequest) throws IOException {
 
 
-       // return  airtimeVtuService.fulfil(airtimeRequest);
-      Mono<AppResponse> mono = airtimeVtuService.fulfil(airtimeRequest);
+       return  airtimeVtuService.fulfil(airtimeRequest);
 
-      return mono.block();
     }
 
     @PostMapping("/authenticate")
@@ -76,6 +74,6 @@ public class HomeController {
         final String token =
                 jwtUtility.generateToken(userDetails);
 
-        return  new JwtResponse(token);
+        return new JwtResponse(token);
     }
 }
